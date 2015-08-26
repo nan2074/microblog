@@ -40,4 +40,16 @@
     }
     return self;
 }
+
+- (void)setDetailFrame:(SNStatusDetailFrame *)detailFrame
+{
+    _detailFrame = detailFrame;
+    self.frame = detailFrame.frame;
+    
+    // 1.原创微博的frame数据
+    self.originalView.originalFrame = detailFrame.originalFrame;
+    
+    // 2.原创转发的frame数据
+    self.retweetedView.retWeetedFrame = detailFrame.retweetedFrame;
+}
 @end

@@ -51,6 +51,10 @@
 		593D95A01B789089009EB468 /* WMCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 593D958F1B789089009EB468 /* WMCommon.m */; };
 		593D95A11B789089009EB468 /* SNMenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 593D95921B789089009EB468 /* SNMenuTableViewCell.m */; };
 		593D95A21B789089009EB468 /* SNPopAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 593D95941B789089009EB468 /* SNPopAnimation.m */; };
+		59535E5C1B8DB2E6008AD0FD /* SNStatusDetailFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 59535E551B8DB2E6008AD0FD /* SNStatusDetailFrame.m */; };
+		59535E5D1B8DB2E6008AD0FD /* SNStatusFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 59535E571B8DB2E6008AD0FD /* SNStatusFrame.m */; };
+		59535E5E1B8DB2E6008AD0FD /* SNStatusOriginalFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 59535E591B8DB2E6008AD0FD /* SNStatusOriginalFrame.m */; };
+		59535E5F1B8DB2E6008AD0FD /* SNStatusRetweetedFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 59535E5B1B8DB2E6008AD0FD /* SNStatusRetweetedFrame.m */; };
 		597563221B8AEE5500C5A9E7 /* SNHomeStatusesParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 597563211B8AEE5500C5A9E7 /* SNHomeStatusesParam.m */; };
 		597563251B8AEF8700C5A9E7 /* SNHomeStatusesResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 597563241B8AEF8700C5A9E7 /* SNHomeStatusesResult.m */; };
 		597563281B8AF07F00C5A9E7 /* SNSendStatusParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 597563271B8AF07F00C5A9E7 /* SNSendStatusParam.m */; };
@@ -97,10 +101,6 @@
 		59F150261B81B375008D354F /* SNPopMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F150251B81B375008D354F /* SNPopMenu.m */; };
 		59F33D7F1B8AC24E0094D4B5 /* SNBaseParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F33D7E1B8AC24E0094D4B5 /* SNBaseParam.m */; };
 		59F5B5401B8C51AC00C942E5 /* SNStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F5B53F1B8C51AC00C942E5 /* SNStatusCell.m */; };
-		59F5B5431B8C529E00C942E5 /* SNStatusDetailFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F5B5421B8C529E00C942E5 /* SNStatusDetailFrame.m */; };
-		59F5B5461B8C53E600C942E5 /* SNStatusFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F5B5451B8C53E600C942E5 /* SNStatusFrame.m */; };
-		59F5B5491B8C54CC00C942E5 /* SNStatusOriginalFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F5B5481B8C54CC00C942E5 /* SNStatusOriginalFrame.m */; };
-		59F5B54C1B8C557F00C942E5 /* SNStatusRetweetedFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F5B54B1B8C557F00C942E5 /* SNStatusRetweetedFrame.m */; };
 		59F5B54F1B8C5CB200C942E5 /* SNStatusDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F5B54E1B8C5CB200C942E5 /* SNStatusDetailView.m */; };
 		59F5B5521B8C5D3800C942E5 /* SNStatusToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F5B5511B8C5D3800C942E5 /* SNStatusToolbar.m */; };
 		59F5B5551B8C5D6700C942E5 /* SNStatusOriginalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F5B5541B8C5D6700C942E5 /* SNStatusOriginalView.m */; };
@@ -208,6 +208,14 @@
 		593D95921B789089009EB468 /* SNMenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNMenuTableViewCell.m; sourceTree = "<group>"; };
 		593D95931B789089009EB468 /* SNPopAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNPopAnimation.h; sourceTree = "<group>"; };
 		593D95941B789089009EB468 /* SNPopAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNPopAnimation.m; sourceTree = "<group>"; };
+		59535E541B8DB2E6008AD0FD /* SNStatusDetailFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNStatusDetailFrame.h; sourceTree = "<group>"; };
+		59535E551B8DB2E6008AD0FD /* SNStatusDetailFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNStatusDetailFrame.m; sourceTree = "<group>"; };
+		59535E561B8DB2E6008AD0FD /* SNStatusFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNStatusFrame.h; sourceTree = "<group>"; };
+		59535E571B8DB2E6008AD0FD /* SNStatusFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNStatusFrame.m; sourceTree = "<group>"; };
+		59535E581B8DB2E6008AD0FD /* SNStatusOriginalFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNStatusOriginalFrame.h; sourceTree = "<group>"; };
+		59535E591B8DB2E6008AD0FD /* SNStatusOriginalFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNStatusOriginalFrame.m; sourceTree = "<group>"; };
+		59535E5A1B8DB2E6008AD0FD /* SNStatusRetweetedFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNStatusRetweetedFrame.h; sourceTree = "<group>"; };
+		59535E5B1B8DB2E6008AD0FD /* SNStatusRetweetedFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNStatusRetweetedFrame.m; sourceTree = "<group>"; };
 		597563201B8AEE5500C5A9E7 /* SNHomeStatusesParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNHomeStatusesParam.h; sourceTree = "<group>"; };
 		597563211B8AEE5500C5A9E7 /* SNHomeStatusesParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNHomeStatusesParam.m; sourceTree = "<group>"; };
 		597563231B8AEF8700C5A9E7 /* SNHomeStatusesResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNHomeStatusesResult.h; sourceTree = "<group>"; };
@@ -302,14 +310,6 @@
 		59F33D7E1B8AC24E0094D4B5 /* SNBaseParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNBaseParam.m; sourceTree = "<group>"; };
 		59F5B53E1B8C51AC00C942E5 /* SNStatusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNStatusCell.h; sourceTree = "<group>"; };
 		59F5B53F1B8C51AC00C942E5 /* SNStatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNStatusCell.m; sourceTree = "<group>"; };
-		59F5B5411B8C529E00C942E5 /* SNStatusDetailFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNStatusDetailFrame.h; path = ../../../../../../../../../../Documents/SNStatusDetailFrame.h; sourceTree = "<group>"; };
-		59F5B5421B8C529E00C942E5 /* SNStatusDetailFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNStatusDetailFrame.m; path = ../../../../../../../../../../Documents/SNStatusDetailFrame.m; sourceTree = "<group>"; };
-		59F5B5441B8C53E600C942E5 /* SNStatusFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNStatusFrame.h; path = ../../../../../../../../../../Documents/SNStatusFrame.h; sourceTree = "<group>"; };
-		59F5B5451B8C53E600C942E5 /* SNStatusFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNStatusFrame.m; path = ../../../../../../../../../../Documents/SNStatusFrame.m; sourceTree = "<group>"; };
-		59F5B5471B8C54CC00C942E5 /* SNStatusOriginalFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNStatusOriginalFrame.h; path = ../../../../../../../../../../Documents/SNStatusOriginalFrame.h; sourceTree = "<group>"; };
-		59F5B5481B8C54CC00C942E5 /* SNStatusOriginalFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNStatusOriginalFrame.m; path = ../../../../../../../../../../Documents/SNStatusOriginalFrame.m; sourceTree = "<group>"; };
-		59F5B54A1B8C557F00C942E5 /* SNStatusRetweetedFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SNStatusRetweetedFrame.h; path = ../../../../../../../../../../Documents/SNStatusRetweetedFrame.h; sourceTree = "<group>"; };
-		59F5B54B1B8C557F00C942E5 /* SNStatusRetweetedFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SNStatusRetweetedFrame.m; path = ../../../../../../../../../../Documents/SNStatusRetweetedFrame.m; sourceTree = "<group>"; };
 		59F5B54D1B8C5CB200C942E5 /* SNStatusDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNStatusDetailView.h; sourceTree = "<group>"; };
 		59F5B54E1B8C5CB200C942E5 /* SNStatusDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNStatusDetailView.m; sourceTree = "<group>"; };
 		59F5B5501B8C5D3800C942E5 /* SNStatusToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNStatusToolbar.h; sourceTree = "<group>"; };
@@ -384,21 +384,6 @@
 				50B9091F1B836FB500332F58 /* UIImageView+WebCache.m */,
 			);
 			path = SDWebImage;
-			sourceTree = "<group>";
-		};
-		5916508C1B8C170B00F31787 /* cell */ = {
-			isa = PBXGroup;
-			children = (
-				59F5B5411B8C529E00C942E5 /* SNStatusDetailFrame.h */,
-				59F5B5421B8C529E00C942E5 /* SNStatusDetailFrame.m */,
-				59F5B5441B8C53E600C942E5 /* SNStatusFrame.h */,
-				59F5B5451B8C53E600C942E5 /* SNStatusFrame.m */,
-				59F5B5471B8C54CC00C942E5 /* SNStatusOriginalFrame.h */,
-				59F5B5481B8C54CC00C942E5 /* SNStatusOriginalFrame.m */,
-				59F5B54A1B8C557F00C942E5 /* SNStatusRetweetedFrame.h */,
-				59F5B54B1B8C557F00C942E5 /* SNStatusRetweetedFrame.m */,
-			);
-			path = cell;
 			sourceTree = "<group>";
 		};
 		5916508D1B8C172400F31787 /* cell */ = {
@@ -563,7 +548,7 @@
 		593D955C1B785A8E009EB468 /* model */ = {
 			isa = PBXGroup;
 			children = (
-				5916508C1B8C170B00F31787 /* cell */,
+				59535E531B8DB2E6008AD0FD /* cell */,
 				50B908F71B836D1700332F58 /* SNUser.h */,
 				50B908F81B836D1700332F58 /* SNUser.m */,
 				50B908FA1B836DCB00332F58 /* SNStatus.h */,
@@ -722,6 +707,21 @@
 				593D95941B789089009EB468 /* SNPopAnimation.m */,
 			);
 			path = view;
+			sourceTree = "<group>";
+		};
+		59535E531B8DB2E6008AD0FD /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				59535E541B8DB2E6008AD0FD /* SNStatusDetailFrame.h */,
+				59535E551B8DB2E6008AD0FD /* SNStatusDetailFrame.m */,
+				59535E561B8DB2E6008AD0FD /* SNStatusFrame.h */,
+				59535E571B8DB2E6008AD0FD /* SNStatusFrame.m */,
+				59535E581B8DB2E6008AD0FD /* SNStatusOriginalFrame.h */,
+				59535E591B8DB2E6008AD0FD /* SNStatusOriginalFrame.m */,
+				59535E5A1B8DB2E6008AD0FD /* SNStatusRetweetedFrame.h */,
+				59535E5B1B8DB2E6008AD0FD /* SNStatusRetweetedFrame.m */,
+			);
+			path = cell;
 			sourceTree = "<group>";
 		};
 		599494921B7B4264008F2BFE /* Newfeature */ = {
@@ -1104,6 +1104,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59535E5F1B8DB2E6008AD0FD /* SNStatusRetweetedFrame.m in Sources */,
 				5975632B1B8AF0ED00C5A9E7 /* SNSendStatusResult.m in Sources */,
 				597563341B8AF73900C5A9E7 /* SNUserTool.m in Sources */,
 				59ADDA9D1B8330CE00709574 /* SNControllerTool.m in Sources */,
@@ -1138,6 +1139,7 @@
 				59F5B5401B8C51AC00C942E5 /* SNStatusCell.m in Sources */,
 				592A4E861B79ED8800230AB6 /* UIImage+Extension.m in Sources */,
 				59D76C031B85CFD000D93827 /* SNComposeToolbar.m in Sources */,
+				59535E5D1B8DB2E6008AD0FD /* SNStatusFrame.m in Sources */,
 				59ADDA971B83173400709574 /* NSObject+MJCoding.m in Sources */,
 				5975633D1B8AFA8E00C5A9E7 /* SNStatusTool.m in Sources */,
 				597563251B8AEF8700C5A9E7 /* SNHomeStatusesResult.m in Sources */,
@@ -1145,13 +1147,11 @@
 				59F33D7F1B8AC24E0094D4B5 /* SNBaseParam.m in Sources */,
 				599494951B7B42A3008F2BFE /* SNNewfeatureViewController.m in Sources */,
 				593D95991B789089009EB468 /* SNMenuViewController.m in Sources */,
-				59F5B5431B8C529E00C942E5 /* SNStatusDetailFrame.m in Sources */,
 				59F7B5A51B86F4CB0017A36D /* SNBaseTool.m in Sources */,
 				50B909241B836FB500332F58 /* SDWebImageDecoder.m in Sources */,
 				50B909271B836FB500332F58 /* SDWebImageManager.m in Sources */,
 				593D959D1B789089009EB468 /* SNOtherViewController.m in Sources */,
 				59ADDA941B83173400709574 /* MJMethod.m in Sources */,
-				59F5B5461B8C53E600C942E5 /* SNStatusFrame.m in Sources */,
 				592A4E801B79DA6800230AB6 /* UIView+Extension.m in Sources */,
 				593D95951B789089009EB468 /* ViewController.m in Sources */,
 				593D95731B785A8E009EB468 /* SNNavigationViewController.m in Sources */,
@@ -1160,14 +1160,12 @@
 				59ADDA981B83173400709574 /* NSObject+MJKeyValue.m in Sources */,
 				50B908FF1B836F5F00332F58 /* SNPhoto.m in Sources */,
 				599BF6A81B7DD78300CE7170 /* SNProfileViewController.m in Sources */,
-				59F5B5491B8C54CC00C942E5 /* SNStatusOriginalFrame.m in Sources */,
 				597563311B8AF15600C5A9E7 /* SNUnreadCountResult.m in Sources */,
 				59D76C061B85D74A00D93827 /* SNComposePhotosView.m in Sources */,
 				50B9092E1B836FB500332F58 /* UIImageView+WebCache.m in Sources */,
 				59ADDA911B83173400709574 /* MJArgument.m in Sources */,
 				59ADDA991B83173400709574 /* NSObject+MJMember.m in Sources */,
 				59ADDA8C1B83173400709574 /* AFURLResponseSerialization.m in Sources */,
-				59F5B54C1B8C557F00C942E5 /* SNStatusRetweetedFrame.m in Sources */,
 				599494911B7B406F008F2BFE /* UIBarButtonItem+Extension.m in Sources */,
 				593D959B1B789089009EB468 /* SNNavigationController.m in Sources */,
 				50B909301B83700800332F58 /* Foundation+Log.m in Sources */,
@@ -1178,6 +1176,7 @@
 				59ADDA931B83173400709574 /* MJMember.m in Sources */,
 				59ADDA851B83173400709574 /* AFHTTPRequestOperation.m in Sources */,
 				59ADDA8A1B83173400709574 /* AFURLConnectionOperation.m in Sources */,
+				59535E5C1B8DB2E6008AD0FD /* SNStatusDetailFrame.m in Sources */,
 				59ADDA961B83173400709574 /* MJTypeEncoding.m in Sources */,
 				59ADDA861B83173400709574 /* AFHTTPRequestOperationManager.m in Sources */,
 				59F150261B81B375008D354F /* SNPopMenu.m in Sources */,
@@ -1200,6 +1199,7 @@
 				599BF6AB1B7DF3ED00CE7170 /* SNTitleBtn.m in Sources */,
 				593D959F1B789089009EB468 /* UIImage+WM.m in Sources */,
 				50B909221B836FB500332F58 /* SDImageCache.m in Sources */,
+				59535E5E1B8DB2E6008AD0FD /* SNStatusOriginalFrame.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

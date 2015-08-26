@@ -33,4 +33,29 @@
 #define SNRedirectURI @"http://www.cocoachina.com/ios/20140714/9130.html"
 
 
+
+// 屏幕尺寸
+#define SNScreenW [UIScreen mainScreen].bounds.size.width
+
+// cell的计算参数
+// cell之间的间距
+#define SNStatusCellMargin 10
+
+// cell的内边距
+#define SNStatusCellInset 10
+
+// 原创微博昵称字体
+#define SNStatusOrginalNameFont [UIFont systemFontOfSize:13]
+// 原创微博时间字体
+#define SNStatusOrginalTimeFont [UIFont systemFontOfSize:11]
+// 原创微博来源字体
+#define SNStatusOrginalSourceFont HMStatusOrginalTimeFont
+// 原创微博正文字体
+#define SNStatusOrginalTextFont [UIFont systemFontOfSize:14]
+
+// 转发微博昵称字体
+#define SNStatusRetweetedNameFont SNStatusOrginalNameFont
+// 转发微博正文字体
+#define SNStatusRetweetedTextFont SNStatusOrginalTextFont
+
 #endif
