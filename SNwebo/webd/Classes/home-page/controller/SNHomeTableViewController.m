@@ -20,6 +20,7 @@
 #import "SNUserTool.h"
 #import "SNStatusTool.h"
 #import "SNStatusCell.h"
+#import "SNStatusFrame.h"
 
 
 @interface SNHomeTableViewController ()<SNPopMenuDelegate>
@@ -173,7 +174,8 @@
     
     // 1.封装请求参数
     SNHomeStatusesParam *param = [SNHomeStatusesParam param];
-    SNStatus *firstStatus = [self.statusesFrames firstObject];
+    SNStatusFrame *firstStatusFrame = [self.statusesFrames firstObject];
+    SNStatus *firstStatus = firstStatusFrame.status;
     if (firstStatus) {
         param.since_id = @([firstStatus.idstr longLongValue]);
     }

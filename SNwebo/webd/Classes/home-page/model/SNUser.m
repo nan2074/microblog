@@ -10,4 +10,8 @@
 
 @implementation SNUser
 
+- (BOOL)isVip
+{
+    return self.mbtype > 2;
+}
 @end

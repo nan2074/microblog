@@ -44,7 +44,15 @@
 
 - (void)setSource:(NSString *)source
 {
+    // 截取范围
+    NSRange range;
+    range.location = [source rangeOfString:@">"].location + 1;
+    range.length = [source rangeOfString:@"</"].location - range.location;
     
+    // 开始截取
+    NSString *subsource = [source substringWithRange:range];
+    
+    _source = [NSString stringWithFormat:@"来自%@",subsource];
 }
 
 @end
