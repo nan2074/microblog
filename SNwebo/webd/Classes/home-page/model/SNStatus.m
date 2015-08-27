@@ -9,12 +9,42 @@
 #import "SNStatus.h"
 #import "MJExtension.h"
 #import "SNPhoto.h"
+#import "NSDate+Extension.h"
 
 @implementation SNStatus
 
 - (NSDictionary *)objectClassInArray
 {
     return @{@"pic_urls":[SNPhoto class]};
+}
+
+- (NSString *)created_at
+{
+    NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
+    fmt.dateFormat = @"EEE MMM dd HH:mm:ss Z yyyy";
+    
+    // 获得微博发布的具体时间
+    NSDate *createDate = [fmt dateFromString:_created_at];
+    
+    // 判断是否为今年
+    if (createDate.isThisYear) {
+        if (createDate.isToday) {
+            
+
+            NSDateComponents *cmps = [createDate deltaWithNow];
+            if (cmps.hour >= 1) {
+                return [NSString stringWithFormat:@"%d小时前",cmps.hour];
+            }
+        }
+    }
+    
+    return 0;
+}
+
+
+- (void)setSource:(NSString *)source
+{
+    
 }
 
 @end

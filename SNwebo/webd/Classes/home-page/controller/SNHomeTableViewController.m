@@ -19,6 +19,8 @@
 #import "SNLoadMoreFooter.h"
 #import "SNUserTool.h"
 #import "SNStatusTool.h"
+#import "SNStatusCell.h"
+
 
 @interface SNHomeTableViewController ()<SNPopMenuDelegate>
 
@@ -27,19 +29,21 @@
 
 @property (weak, nonatomic) SNTitleBtn *titleButton;
 
-@property (nonatomic, strong) NSMutableArray *statuses;
+@property (nonatomic, strong) NSMutableArray *statusesFrames;
 @property (weak, nonatomic) SNLoadMoreFooter *footer;
+
+
 @end
 
 @implementation SNHomeTableViewController
 
 
-- (NSMutableArray *)statuses
+- (NSMutableArray *)statusesFrames
 {
-    if (_statuses == nil) {
-        _statuses = [NSMutableArray array];
+    if (_statusesFrames == nil) {
+        _statusesFrames = [NSMutableArray array];
     }
-    return _statuses;
+    return _statusesFrames;
 }
 
 - (void)viewDidLoad {
@@ -47,6 +51,8 @@
     
     [super viewDidLoad];
     
+    self.tableView.backgroundColor = SNColor(211, 211, 211);
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     [self setupNavBar];
     
@@ -167,7 +173,7 @@
     
     // 1.封装请求参数
     SNHomeStatusesParam *param = [SNHomeStatusesParam param];
-    SNStatus *firstStatus = [self.statuses firstObject];
+    SNStatus *firstStatus = [self.statusesFrames firstObject];
     if (firstStatus) {
         param.since_id = @([firstStatus.idstr longLongValue]);
     }
@@ -183,7 +189,7 @@
 
         NSIndexSet *indexSet = [NSIndexSet indexSetWithIndexesInRange:range];
 
-        [self.statuses insertObjects:newStatuses atIndexes:indexSet];
+        [self.statusesFrames insertObjects:newStatuses atIndexes:indexSet];
 
         // 从新刷新表格
         [self.tableView reloadData];
@@ -298,7 +304,7 @@
 //    }];
     // 1.封装请求参数
     SNHomeStatusesParam *param = [SNHomeStatusesParam param];
-    SNStatus *lastStatus = [self.statuses lastObject];
+    SNStatus *lastStatus = [self.statusesFrames lastObject];
     if (lastStatus) {
         param.max_id = @([lastStatus.idstr longLongValue] - 1);
     }
@@ -310,7 +316,7 @@
         NSArray *newStatuses = result.statuses;
         
         //将新数据插入的旧数据的最后面
-        [self.statuses addObjectsFromArray:newStatuses];
+        [self.statusesFrames addObjectsFromArray:newStatuses];
         
         // 从新刷新表格
         [self.tableView reloadData];
@@ -347,7 +353,8 @@
     // 设置尺寸
     titleButton.height = 35;
     titleButton.width = 100;
-    [titleButton setTitle:@"首页" forState:UIControlStateNormal];
+    NSString *name = [SNAccountTool account].name;
+    [titleButton setTitle:name?name : @"首页" forState:UIControlStateNormal];
     // 设置文字
 //    NSString *name = [HMAccountTool account].name;
 //    [titleButton setTitle:name ? name : @"首页" forState:UIControlStateNormal];
@@ -408,29 +415,33 @@
 
     // Return the number of rows in the section.
     
-    self.footer.hidden = self.statuses.count == 0;
-    return self.statuses.count;
+    self.footer.hidden = self.statusesFrames.count == 0;
+    return self.statusesFrames.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *ID = @"cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
-    }
+//    static NSString *ID = @"cell";
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+//    if (!cell) {
+//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
+//    }
+//    
+//    // 取出这行对应的微博
+//    SNStatus *status = self.statuses[indexPath.row];
+//    cell.textLabel.text = status.text;
+//    
+//    // 取出用户
+//    SNUser *user = status.user;
+//    cell.detailTextLabel.text = user.name;
+//    
+//    // 下载头像
+//    NSString *imageUrlStr = user.profile_image_url;
+//    [cell.imageView setImageWithURL:[NSURL URLWithString:imageUrlStr] placeholderImage:[UIImage imageNamed:@"avatar_default_small"]];
     
-    // 取出这行对应的微博
-    SNStatus *status = self.statuses[indexPath.row];
-    cell.textLabel.text = status.text;
     
-    // 取出用户
-    SNUser *user = status.user;
-    cell.detailTextLabel.text = user.name;
-    
-    // 下载头像
-    NSString *imageUrlStr = user.profile_image_url;
-    [cell.imageView setImageWithURL:[NSURL URLWithString:imageUrlStr] placeholderImage:[UIImage imageNamed:@"avatar_default_small"]];
+    SNStatusCell *cell = [SNStatusCell cellWithTableView:tableView];
+    cell.statusFrame = self.statusesFrames[indexPath.row];
     
     return cell;
 }
@@ -438,7 +449,7 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    if (self.statuses.count <= 0 || self.footer.refreshing) {
+    if (self.statusesFrames.count <= 0 || self.footer.refreshing) {
         return;
     }
     

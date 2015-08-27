@@ -49,7 +49,7 @@
 // 原创微博时间字体
 #define SNStatusOrginalTimeFont [UIFont systemFontOfSize:11]
 // 原创微博来源字体
-#define SNStatusOrginalSourceFont HMStatusOrginalTimeFont
+#define SNStatusOrginalSourceFont SNStatusOrginalTimeFont
 // 原创微博正文字体
 #define SNStatusOrginalTextFont [UIFont systemFontOfSize:14]
 
@@ -57,5 +57,9 @@
 #define SNStatusRetweetedNameFont SNStatusOrginalNameFont
 // 转发微博正文字体
 #define SNStatusRetweetedTextFont SNStatusOrginalTextFont
+
+
+// 颜色
+#define SNColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
 
 #endif
