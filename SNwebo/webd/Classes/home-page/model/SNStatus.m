@@ -32,13 +32,32 @@
             
 
             NSDateComponents *cmps = [createDate deltaWithNow];
-            if (cmps.hour >= 1) {
-                return [NSString stringWithFormat:@"%d小时前",cmps.hour];
+            if (cmps.hour >= 1) { // 至少是一个小时前发的
+                return [NSString stringWithFormat:@"%lu小时前",cmps.hour];
+            }
+            else if (cmps.minute >= 1) { // 1~59分钟之前发的
+                return [NSString stringWithFormat:@"%lu分钟前",cmps.minute];
+            }
+            else {
+                // 1分钟前发的
+                return @"刚刚";
             }
         }
+        else if (createDate.isYesterday) {
+            fmt.dateFormat = @"昨天 HH:mm";
+            return [fmt stringFromDate:createDate];
+        }
+        else {
+            fmt.dateFormat = @"yyyy-MM-dd";
+            return [fmt stringFromDate:createDate];
+        }
+    }
+    else {
+        fmt.dateFormat = @"yyyy-MM-dd";
+        return [fmt stringFromDate:createDate];
     }
     
-    return 0;
+
 }
 
 
