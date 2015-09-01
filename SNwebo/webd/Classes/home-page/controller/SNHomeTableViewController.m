@@ -62,7 +62,7 @@
     
     [self setupRefresh];
     
-    [self setupUserInfo];
+//    [self setupUserInfo];
     
     
 }
@@ -121,6 +121,24 @@
 {
     [self loadNewStatuses:refreshControl];
 }
+
+
+
+- (NSArray *)statusFramesWithStauses:(NSArray *)statuses
+{
+    NSMutableArray *frames = [NSMutableArray array];
+    for (SNStatus *status in statuses) {
+        
+        SNStatusFrame *frame = [[SNStatusFrame alloc] init];
+        
+        // 传递微博模型数据
+        frame.status = status;
+        [frames addObject:frame];
+    }
+    return frames;
+}
+
+
 
 /**
  *  加载新数据
@@ -184,8 +202,8 @@
     [SNStatusTool homeStatusesWithParam:param success:^(SNHomeStatusesResult *result) {
         
         // 获得最新的微博数组
-        NSArray *newStatuses = result.statuses;
-        
+        NSArray *newStatuses = [self statusFramesWithStauses:result.statuses];
+      
 //        将最新的数据插入到旧数据前面
         NSRange range = NSMakeRange(0, newStatuses.count);
 
@@ -306,7 +324,8 @@
 //    }];
     // 1.封装请求参数
     SNHomeStatusesParam *param = [SNHomeStatusesParam param];
-    SNStatus *lastStatus = [self.statusesFrames lastObject];
+    SNStatusFrame *lastStatusFrame = [self.statusesFrames lastObject];
+    SNStatus *lastStatus = lastStatusFrame.status;
     if (lastStatus) {
         param.max_id = @([lastStatus.idstr longLongValue] - 1);
     }
@@ -315,7 +334,7 @@
     [SNStatusTool homeStatusesWithParam:param success:^(SNHomeStatusesResult *result) {
         
         // 微博模型数组
-        NSArray *newStatuses = result.statuses;
+        NSArray *newStatuses = [self statusFramesWithStauses:result.statuses];
         
         //将新数据插入的旧数据的最后面
         [self.statusesFrames addObjectsFromArray:newStatuses];
@@ -443,11 +462,17 @@
     
     
     SNStatusCell *cell = [SNStatusCell cellWithTableView:tableView];
+ 
     cell.statusFrame = self.statusesFrames[indexPath.row];
     
     return cell;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    SNStatusFrame *frame = self.statusesFrames[indexPath.row];
+    return frame.cellHeight;
+}
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
