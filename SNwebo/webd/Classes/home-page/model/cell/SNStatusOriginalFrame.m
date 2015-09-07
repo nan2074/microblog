@@ -9,13 +9,13 @@
 #import "SNStatusOriginalFrame.h"
 #import "SNStatus.h"
 #import "SNUser.h"
-
+#import "SNStatusPhotosView.h"
 @implementation SNStatusOriginalFrame
 
 - (void)setStatus:(SNStatus *)status
 {
     _status = status;
-    
+
     // 1.头像
     CGFloat iconX = SNStatusCellInset;
     CGFloat iconY = SNStatusCellInset;
@@ -26,7 +26,9 @@
     // 2.昵称
     CGFloat nameX = CGRectGetMaxX(self.iconFrame) + SNStatusCellInset;
     CGFloat nameY = iconY;
-    CGSize nameSize = [status.user.name sizeWithFont:SNStatusOrginalNameFont];
+//    CGSize nameSize = [status.user.name sizeWithFont:SNStatusOrginalNameFont];
+    CGSize nameSize = [status.user.name sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:13]}];
+
     self.nameFrame = (CGRect){{nameX, nameY}, nameSize};
     
     if (status.user.isVip) { // 计算会员图标的位置
@@ -45,11 +47,25 @@
     CGSize textSize = [status.text sizeWithFont:SNStatusOrginalTextFont constrainedToSize:maxSize];
     self.textFrame = (CGRect){{textX, textY}, textSize};
     
+    // 4.配图相册
+    CGFloat h = 0;
+    if (status.pic_urls.count) {
+        CGFloat photosX = textX;
+        CGFloat photosY = textY;
+        CGSize photoSize = [SNStatusPhotosView sizeWithPhotoCount:status.pic_urls.count];
+        self.photosFrame = (CGRect){{photosX,photosY},photoSize};
+        h = CGRectGetMaxY(self.photosFrame) + SNStatusCellInset;
+    }
+    else
+    {
+        h = CGRectGetMaxY(self.textFrame) + SNStatusCellInset;
+    }
+    
     // 自己
     CGFloat x = 0;
     CGFloat y = 0;
     CGFloat w = SNScreenW;
-    CGFloat h = CGRectGetMaxY(self.textFrame) + SNStatusCellInset;
+  
     self.frame = CGRectMake(x, y, w, h);
 }
 

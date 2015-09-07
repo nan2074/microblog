@@ -73,14 +73,14 @@
     // 1.获取请求地址
     NSString *url = request.URL.absoluteString;
     
-    SNLog(@"access_token请求地址 = %@",url);
+
     
     // 2.判断URl是否为回调地址
     NSString *str = [NSString stringWithFormat:@"%@?code=",SNRedirectURI];
    
     NSRange range = [url rangeOfString:str];
     
-    SNLog(@"location = %lu length = %lu",range.location,range.length);
+  
     if (range.location != NSNotFound) {
         
         // 截取授权成功后的请求标记

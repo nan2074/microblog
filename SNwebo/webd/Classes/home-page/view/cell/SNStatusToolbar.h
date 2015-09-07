@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class SNStatus;
 @interface SNStatusToolbar : UIImageView
 
+@property (assign, nonatomic) SNStatus *status;
 @end

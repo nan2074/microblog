@@ -130,7 +130,7 @@
     for (SNStatus *status in statuses) {
         
         SNStatusFrame *frame = [[SNStatusFrame alloc] init];
-        
+        SNLog(@"Status = %@",status.user);
         // 传递微博模型数据
         frame.status = status;
         [frames addObject:frame];
@@ -202,6 +202,7 @@
     [SNStatusTool homeStatusesWithParam:param success:^(SNHomeStatusesResult *result) {
         
         // 获得最新的微博数组
+
         NSArray *newStatuses = [self statusFramesWithStauses:result.statuses];
       
 //        将最新的数据插入到旧数据前面
@@ -483,11 +484,11 @@
     // 1.差距
     CGFloat delta = scrollView.contentSize.height - scrollView.contentOffset.y;
     
-    SNLog(@"scrollView.contentSize.height = %f\nscrollView.contentOffset.y = %f",scrollView.contentSize.height,scrollView.contentOffset.y);
+
     // 刚好能完整看到footer的高度
     CGFloat sawFooterH = self.view.height - self.tabBarController.tabBar.height;
     
-    SNLog(@"delta = %f--------sawFooterH = %f",delta,sawFooterH);
+  
     // 2.如果能看见整个footer
     if (delta <= (sawFooterH - 0)) {
         

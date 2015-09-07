@@ -20,6 +20,7 @@
         if (success) {
             
             id result = [resultClass objectWithKeyValues:responseObj];
+       
             success(result);
         }
     } failure:^(NSError * error) {

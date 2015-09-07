@@ -21,7 +21,7 @@
     [super viewDidLoad];
     
 
-    SNLog(@"加载SNNavigationViewController");
+
     
  
 }
@@ -34,8 +34,7 @@
     // 设置UIBarButtonItem的主题
     [self setupBarButtonItemTheme];
     
-    
-    SNLog(@"设置UINavigationBarTheme和setupBarButtonItemTheme主题");
+
  
 }
 

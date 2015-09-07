@@ -51,7 +51,7 @@
     
     [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
     
-    SNLog(@"加载SNTabBarViewController");
+
     
     
 
@@ -112,7 +112,7 @@
         else
         {
             [UIApplication sharedApplication].applicationIconBadgeNumber = result.totalCount;
-            SNLog(@"result.totalCount = %d",[UIApplication sharedApplication].applicationIconBadgeNumber );
+            
         }
 
         

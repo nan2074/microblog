@@ -18,7 +18,8 @@
 @property (nonatomic, assign) CGRect iconFrame;
 /** 会员图标 */
 @property (nonatomic, assign) CGRect vipFrame;
-
+/** 配图相册 */
+@property (assign, nonatomic) CGRect photosFrame;
 /** 自己的frame */
 @property (nonatomic, assign) CGRect frame;
 

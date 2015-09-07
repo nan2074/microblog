@@ -9,6 +9,7 @@
 #import "SNStatusRetweetedFrame.h"
 #import "SNStatus.h"
 #import "SNUser.h"
+#import "SNStatusPhotosView.h"
 
 @implementation SNStatusRetweetedFrame
 
@@ -31,11 +32,25 @@
     CGSize textSize = [retweetedStatus.text sizeWithFont:SNStatusRetweetedTextFont constrainedToSize:maxSize];
     self.textFrame = (CGRect){{textX, textY}, textSize};
     
+    // 3.配图相册
+    CGFloat h = 0;
+    if (retweetedStatus.pic_urls.count) {
+        CGFloat photosX = textX;
+        CGFloat photosY = textY;
+        CGSize photoSize = [SNStatusPhotosView sizeWithPhotoCount:retweetedStatus.pic_urls.count];
+        self.photosFrame = (CGRect){{photosX,photosY},photoSize};
+        h = CGRectGetMaxY(self.photosFrame) + SNStatusCellInset;
+    }
+    else
+    {
+        h = CGRectGetMaxY(self.textFrame) + SNStatusCellInset;
+    }
+
     // 自己
     CGFloat x = 0;
     CGFloat y = 0; // 高度 = 原创微博最大的Y值
     CGFloat w = SNScreenW;
-    CGFloat h = CGRectGetMaxY(self.textFrame) + SNStatusCellInset;
+
     self.frame = CGRectMake(x, y, w, h);
 }
 

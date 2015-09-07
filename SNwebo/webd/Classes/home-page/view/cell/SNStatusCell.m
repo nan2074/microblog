@@ -63,6 +63,7 @@
     
     // 2.底部工具条的frame
     self.toolbar.frame = _statusFrame.toolbarFrame;
+    self.toolbar.status = statusFrame.status;
 }
 
 @end
