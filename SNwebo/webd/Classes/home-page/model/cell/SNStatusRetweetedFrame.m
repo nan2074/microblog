@@ -36,7 +36,7 @@
     CGFloat h = 0;
     if (retweetedStatus.pic_urls.count) {
         CGFloat photosX = textX;
-        CGFloat photosY = textY;
+        CGFloat photosY = CGRectGetMaxY(self.textFrame) + SNStatusCellInset;
         CGSize photoSize = [SNStatusPhotosView sizeWithPhotoCount:retweetedStatus.pic_urls.count];
         self.photosFrame = (CGRect){{photosX,photosY},photoSize};
         h = CGRectGetMaxY(self.photosFrame) + SNStatusCellInset;

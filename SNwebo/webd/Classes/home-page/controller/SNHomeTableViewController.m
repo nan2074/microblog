@@ -130,7 +130,7 @@
     for (SNStatus *status in statuses) {
         
         SNStatusFrame *frame = [[SNStatusFrame alloc] init];
-        SNLog(@"Status = %@",status.user);
+     
         // 传递微博模型数据
         frame.status = status;
         [frames addObject:frame];

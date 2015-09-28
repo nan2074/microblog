@@ -10,4 +10,10 @@
 
 @implementation SNPhoto
 
+
+- (void)setThumbnail_pic:(NSString *)thumbnail_pic
+{
+    _bmiddle_pic = [thumbnail_pic copy];
+    self.bmiddle_pic = [thumbnail_pic stringByReplacingOccurrencesOfString:@"thumbnail" withString:@"bniddle"];
+}
 @end

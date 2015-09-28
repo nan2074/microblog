@@ -76,6 +76,7 @@
 
     }];
 
+    [mgr startMonitoring];
     return YES;
 }
 

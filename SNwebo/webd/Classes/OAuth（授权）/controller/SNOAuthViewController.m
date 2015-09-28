@@ -13,7 +13,7 @@
 #import "SNAccountTool.h"
 #import "SNControllerTool.h"
 @interface SNOAuthViewController ()<UIWebViewDelegate>
-
+@property (weak, nonatomic) UIWebView *webView;
 @end
 
 @implementation SNOAuthViewController
@@ -25,6 +25,8 @@
     UIWebView *webView = [[UIWebView alloc] init];
     webView.frame = self.view.bounds;
     [self.view addSubview:webView];
+    self.webView = webView;
+ 
     
     // 2.加载登陆页面
     NSString *urlStr = [NSString stringWithFormat:@"https://api.weibo.com/oauth2/authorize?client_id=%@&redirect_uri=%@",SNAppKey,SNRedirectURI];
@@ -73,14 +75,14 @@
     // 1.获取请求地址
     NSString *url = request.URL.absoluteString;
     
-
+    
     
     // 2.判断URl是否为回调地址
     NSString *str = [NSString stringWithFormat:@"%@?code=",SNRedirectURI];
    
     NSRange range = [url rangeOfString:str];
     
-  
+    
     if (range.location != NSNotFound) {
         
         // 截取授权成功后的请求标记
@@ -99,16 +101,7 @@
 
 - (void)accessTokenWithCode:(NSString *)code
 {
-    // 1.获得请求管理者
-//    AFHTTPRequestOperationManager *mgr = [AFHTTPRequestOperationManager manager];
-    // 2.封装请求参数
-//    NSMutableDictionary *params = [NSMutableDictionary dictionary];
-//    params[@"client_id"]     = SNAppKey;
-//    params[@"client_secret"] = SNAppSecret;
-//    params[@"redirect_uri"]  = SNRedirectURI;
-//    params[@"grant_type"]    = @"authorization_code";
-//    params[@"code"]          = code;
-    
+
     // 1.封装请求参数
     SNAccessTokenParam *param = [[SNAccessTokenParam alloc] init];
     param.client_id = SNAppKey;
@@ -136,27 +129,6 @@
         
         SNLog(@"请求发送时报------%@",error);
     }];
-    
-//    // 3.发送post请求
-//    [mgr POST:@"https://api.weibo.com/oauth2/access_token" parameters:params success:^(AFHTTPRequestOperation *operation, NSDictionary *responseObject) {
-//        
-//        [MBProgressHUD hideHUD];
-//        SNLog(@"accessToken请求成功");
-//        
-//        // 字典转模型
-//        SNAccount *account = [SNAccount accountWithDict:responseObject];
-//        
-//        //存储账号模型
-//        [SNAccountTool save:account];
-//        
-//        // 切换控制器
-//        [SNControllerTool chooseRootViewController];
-//        
-//    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-//        [MBProgressHUD hideHUD];
-//        SNLog(@"access_token请求失败");
-//    }];
-    
 }
 
 
