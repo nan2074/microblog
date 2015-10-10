@@ -26,6 +26,13 @@
 		50B9092D1B836FB500332F58 /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B9091D1B836FB500332F58 /* UIImageView+HighlightedWebCache.m */; };
 		50B9092E1B836FB500332F58 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B9091F1B836FB500332F58 /* UIImageView+WebCache.m */; };
 		50B909301B83700800332F58 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B9092F1B83700800332F58 /* Foundation+Log.m */; };
+		59013A721BC798C10045FBCD /* SNEmotionGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59013A711BC798C10045FBCD /* SNEmotionGridView.m */; settings = {ASSET_TAGS = (); }; };
+		59013A751BC799B00045FBCD /* SNEmotionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59013A741BC799B00045FBCD /* SNEmotionView.m */; settings = {ASSET_TAGS = (); }; };
+		59013A781BC79A010045FBCD /* SNEmotionPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59013A771BC79A010045FBCD /* SNEmotionPopView.m */; settings = {ASSET_TAGS = (); }; };
+		59013A7A1BC79AFA0045FBCD /* SNEmotionPopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59013A791BC79AFA0045FBCD /* SNEmotionPopView.xib */; settings = {ASSET_TAGS = (); }; };
+		59013BBC1BC7B3780045FBCD /* SNEmotion.m in Sources */ = {isa = PBXBuildFile; fileRef = 59013BBB1BC7B3780045FBCD /* SNEmotion.m */; settings = {ASSET_TAGS = (); }; };
+		59013BC01BC7B3E50045FBCD /* SNEmotionTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 59013BBF1BC7B3E50045FBCD /* SNEmotionTool.m */; settings = {ASSET_TAGS = (); }; };
+		590A89E01BC654E600CCA5E5 /* EmotionIcons in Resources */ = {isa = PBXBuildFile; fileRef = 590A89DF1BC654E600CCA5E5 /* EmotionIcons */; settings = {ASSET_TAGS = (); }; };
 		590B1C6A1B9BD60E006EF69E /* SNStatusPhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = 590B1C691B9BD60E006EF69E /* SNStatusPhotosView.m */; };
 		590B1CFE1B9BF684006EF69E /* MJArgument.m in Sources */ = {isa = PBXBuildFile; fileRef = 590B1CEC1B9BF684006EF69E /* MJArgument.m */; };
 		590B1CFF1B9BF684006EF69E /* MJIvar.m in Sources */ = {isa = PBXBuildFile; fileRef = 590B1CEF1B9BF684006EF69E /* MJIvar.m */; };
@@ -107,6 +114,9 @@
 		59D76C001B85A2BC00D93827 /* SNTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D76BFF1B85A2BC00D93827 /* SNTextView.m */; };
 		59D76C031B85CFD000D93827 /* SNComposeToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D76C021B85CFD000D93827 /* SNComposeToolbar.m */; };
 		59D76C061B85D74A00D93827 /* SNComposePhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D76C051B85D74A00D93827 /* SNComposePhotosView.m */; };
+		59DC5DB91BC60F01002C3B61 /* SNEmotionKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 59DC5DB81BC60F01002C3B61 /* SNEmotionKeyboard.m */; settings = {ASSET_TAGS = (); }; };
+		59DC5DBC1BC60F1E002C3B61 /* SNEmotionListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59DC5DBB1BC60F1E002C3B61 /* SNEmotionListView.m */; settings = {ASSET_TAGS = (); }; };
+		59DC5DBF1BC60F43002C3B61 /* SNEmotionToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 59DC5DBE1BC60F43002C3B61 /* SNEmotionToolbar.m */; settings = {ASSET_TAGS = (); }; };
 		59F150231B81A8AD008D354F /* SNSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F150221B81A8AD008D354F /* SNSearchBar.m */; };
 		59F150261B81B375008D354F /* SNPopMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F150251B81B375008D354F /* SNPopMenu.m */; };
 		59F33D7F1B8AC24E0094D4B5 /* SNBaseParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F33D7E1B8AC24E0094D4B5 /* SNBaseParam.m */; };
@@ -172,6 +182,18 @@
 		50B9091E1B836FB500332F58 /* UIImageView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebCache.h"; sourceTree = "<group>"; };
 		50B9091F1B836FB500332F58 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		50B9092F1B83700800332F58 /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
+		59013A701BC798C10045FBCD /* SNEmotionGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNEmotionGridView.h; sourceTree = "<group>"; };
+		59013A711BC798C10045FBCD /* SNEmotionGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNEmotionGridView.m; sourceTree = "<group>"; };
+		59013A731BC799B00045FBCD /* SNEmotionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNEmotionView.h; sourceTree = "<group>"; };
+		59013A741BC799B00045FBCD /* SNEmotionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNEmotionView.m; sourceTree = "<group>"; };
+		59013A761BC79A010045FBCD /* SNEmotionPopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNEmotionPopView.h; sourceTree = "<group>"; };
+		59013A771BC79A010045FBCD /* SNEmotionPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNEmotionPopView.m; sourceTree = "<group>"; };
+		59013A791BC79AFA0045FBCD /* SNEmotionPopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SNEmotionPopView.xib; sourceTree = "<group>"; };
+		59013BBA1BC7B3780045FBCD /* SNEmotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNEmotion.h; sourceTree = "<group>"; };
+		59013BBB1BC7B3780045FBCD /* SNEmotion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNEmotion.m; sourceTree = "<group>"; };
+		59013BBE1BC7B3E50045FBCD /* SNEmotionTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNEmotionTool.h; sourceTree = "<group>"; };
+		59013BBF1BC7B3E50045FBCD /* SNEmotionTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNEmotionTool.m; sourceTree = "<group>"; };
+		590A89DF1BC654E600CCA5E5 /* EmotionIcons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = EmotionIcons; sourceTree = "<group>"; };
 		590B1C681B9BD60E006EF69E /* SNStatusPhotosView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNStatusPhotosView.h; sourceTree = "<group>"; };
 		590B1C691B9BD60E006EF69E /* SNStatusPhotosView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNStatusPhotosView.m; sourceTree = "<group>"; };
 		590B1CEB1B9BF684006EF69E /* MJArgument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJArgument.h; sourceTree = "<group>"; };
@@ -331,6 +353,12 @@
 		59D76C021B85CFD000D93827 /* SNComposeToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNComposeToolbar.m; sourceTree = "<group>"; };
 		59D76C041B85D74A00D93827 /* SNComposePhotosView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNComposePhotosView.h; sourceTree = "<group>"; };
 		59D76C051B85D74A00D93827 /* SNComposePhotosView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNComposePhotosView.m; sourceTree = "<group>"; };
+		59DC5DB71BC60F01002C3B61 /* SNEmotionKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNEmotionKeyboard.h; sourceTree = "<group>"; };
+		59DC5DB81BC60F01002C3B61 /* SNEmotionKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNEmotionKeyboard.m; sourceTree = "<group>"; };
+		59DC5DBA1BC60F1E002C3B61 /* SNEmotionListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNEmotionListView.h; sourceTree = "<group>"; };
+		59DC5DBB1BC60F1E002C3B61 /* SNEmotionListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNEmotionListView.m; sourceTree = "<group>"; };
+		59DC5DBD1BC60F43002C3B61 /* SNEmotionToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNEmotionToolbar.h; sourceTree = "<group>"; };
+		59DC5DBE1BC60F43002C3B61 /* SNEmotionToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNEmotionToolbar.m; sourceTree = "<group>"; };
 		59F150201B818DE8008D354F /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		59F150211B81A8AD008D354F /* SNSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNSearchBar.h; sourceTree = "<group>"; };
 		59F150221B81A8AD008D354F /* SNSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNSearchBar.m; sourceTree = "<group>"; };
@@ -416,6 +444,24 @@
 				50B9091F1B836FB500332F58 /* UIImageView+WebCache.m */,
 			);
 			path = SDWebImage;
+			sourceTree = "<group>";
+		};
+		59013B1A1BC7B3530045FBCD /* model */ = {
+			isa = PBXGroup;
+			children = (
+				59013BBA1BC7B3780045FBCD /* SNEmotion.h */,
+				59013BBB1BC7B3780045FBCD /* SNEmotion.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		59013BBD1BC7B3AA0045FBCD /* tool */ = {
+			isa = PBXGroup;
+			children = (
+				59013BBE1BC7B3E50045FBCD /* SNEmotionTool.h */,
+				59013BBF1BC7B3E50045FBCD /* SNEmotionTool.m */,
+			);
+			path = tool;
 			sourceTree = "<group>";
 		};
 		590B1CEA1B9BF684006EF69E /* MJExtension */ = {
@@ -536,6 +582,7 @@
 		593D952B1B785A63009EB468 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				590A89DF1BC654E600CCA5E5 /* EmotionIcons */,
 				593D952C1B785A63009EB468 /* Info.plist */,
 				593D952D1B785A63009EB468 /* main.m */,
 				59F150201B818DE8008D354F /* PrefixHeader.pch */,
@@ -856,8 +903,9 @@
 			isa = PBXGroup;
 			children = (
 				59ADDA491B82C56200709574 /* controller */,
-				59ADDA4A1B82C56200709574 /* model */,
+				59013B1A1BC7B3530045FBCD /* model */,
 				59ADDA4B1B82C56200709574 /* view */,
+				59013BBD1BC7B3AA0045FBCD /* tool */,
 			);
 			path = compose;
 			sourceTree = "<group>";
@@ -871,16 +919,10 @@
 			path = controller;
 			sourceTree = "<group>";
 		};
-		59ADDA4A1B82C56200709574 /* model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = model;
-			sourceTree = "<group>";
-		};
 		59ADDA4B1B82C56200709574 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				59DC5DB61BC60EB1002C3B61 /* emotionKeyboard */,
 				59D76BFE1B85A2BC00D93827 /* SNTextView.h */,
 				59D76BFF1B85A2BC00D93827 /* SNTextView.m */,
 				59D76C011B85CFD000D93827 /* SNComposeToolbar.h */,
@@ -991,6 +1033,26 @@
 				5975633C1B8AFA8E00C5A9E7 /* SNStatusTool.m */,
 			);
 			path = Tool;
+			sourceTree = "<group>";
+		};
+		59DC5DB61BC60EB1002C3B61 /* emotionKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				59DC5DB71BC60F01002C3B61 /* SNEmotionKeyboard.h */,
+				59DC5DB81BC60F01002C3B61 /* SNEmotionKeyboard.m */,
+				59DC5DBA1BC60F1E002C3B61 /* SNEmotionListView.h */,
+				59DC5DBB1BC60F1E002C3B61 /* SNEmotionListView.m */,
+				59DC5DBD1BC60F43002C3B61 /* SNEmotionToolbar.h */,
+				59DC5DBE1BC60F43002C3B61 /* SNEmotionToolbar.m */,
+				59013A701BC798C10045FBCD /* SNEmotionGridView.h */,
+				59013A711BC798C10045FBCD /* SNEmotionGridView.m */,
+				59013A731BC799B00045FBCD /* SNEmotionView.h */,
+				59013A741BC799B00045FBCD /* SNEmotionView.m */,
+				59013A761BC79A010045FBCD /* SNEmotionPopView.h */,
+				59013A771BC79A010045FBCD /* SNEmotionPopView.m */,
+				59013A791BC79AFA0045FBCD /* SNEmotionPopView.xib */,
+			);
+			path = emotionKeyboard;
 			sourceTree = "<group>";
 		};
 		59F7B5971B86D2770017A36D /* model */ = {
@@ -1142,9 +1204,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59013A7A1BC79AFA0045FBCD /* SNEmotionPopView.xib in Resources */,
 				593D95371B785A63009EB468 /* Main.storyboard in Resources */,
 				593D953C1B785A63009EB468 /* LaunchScreen.xib in Resources */,
 				593D959E1B789089009EB468 /* SNOtherViewController.xib in Resources */,
+				590A89E01BC654E600CCA5E5 /* EmotionIcons in Resources */,
 				593D959A1B789089009EB468 /* SNMenuViewController.xib in Resources */,
 				593D95391B785A63009EB468 /* Images.xcassets in Resources */,
 				59ADDA8F1B83173400709574 /* MBProgressHUD.bundle in Resources */,
@@ -1188,6 +1252,7 @@
 				50B909231B836FB500332F58 /* SDWebImageCompat.m in Sources */,
 				50B909251B836FB500332F58 /* SDWebImageDownloader.m in Sources */,
 				597563281B8AF07F00C5A9E7 /* SNSendStatusParam.m in Sources */,
+				59013BBC1BC7B3780045FBCD /* SNEmotion.m in Sources */,
 				59F8DA1B1B844DAD00D5C2DA /* SNLoadMoreFooter.m in Sources */,
 				590B1D091B9C2460006EF69E /* SNStatusPhotoView.m in Sources */,
 				59F7B59F1B86D2770017A36D /* SNAccount.m in Sources */,
@@ -1199,6 +1264,7 @@
 				593D95741B785A8E009EB468 /* SNTabBarViewController.m in Sources */,
 				59ADDA8E1B83173400709574 /* MBProgressHUD+MJ.m in Sources */,
 				59ADDA8D1B83173400709574 /* AFURLSessionManager.m in Sources */,
+				59DC5DBC1BC60F1E002C3B61 /* SNEmotionListView.m in Sources */,
 				590B1CFF1B9BF684006EF69E /* MJIvar.m in Sources */,
 				50B9092D1B836FB500332F58 /* UIImageView+HighlightedWebCache.m in Sources */,
 				590B1CFE1B9BF684006EF69E /* MJArgument.m in Sources */,
@@ -1209,6 +1275,7 @@
 				59D76C031B85CFD000D93827 /* SNComposeToolbar.m in Sources */,
 				59535E5D1B8DB2E6008AD0FD /* SNStatusFrame.m in Sources */,
 				590B1C6A1B9BD60E006EF69E /* SNStatusPhotosView.m in Sources */,
+				59DC5DB91BC60F01002C3B61 /* SNEmotionKeyboard.m in Sources */,
 				5975633D1B8AFA8E00C5A9E7 /* SNStatusTool.m in Sources */,
 				597563251B8AEF8700C5A9E7 /* SNHomeStatusesResult.m in Sources */,
 				50B909201B836FB500332F58 /* MKAnnotationView+WebCache.m in Sources */,
@@ -1216,6 +1283,7 @@
 				599494951B7B42A3008F2BFE /* SNNewfeatureViewController.m in Sources */,
 				590B1D031B9BF684006EF69E /* MJTypeEncoding.m in Sources */,
 				593D95991B789089009EB468 /* SNMenuViewController.m in Sources */,
+				59013A781BC79A010045FBCD /* SNEmotionPopView.m in Sources */,
 				59F7B5A51B86F4CB0017A36D /* SNBaseTool.m in Sources */,
 				50B909241B836FB500332F58 /* SDWebImageDecoder.m in Sources */,
 				50B909271B836FB500332F58 /* SDWebImageManager.m in Sources */,
@@ -1228,7 +1296,10 @@
 				59FCC9961B8F0A2800D3FD6D /* NSDate+Extension.m in Sources */,
 				593D95721B785A8E009EB468 /* SNMessageTableViewController.m in Sources */,
 				50B908FF1B836F5F00332F58 /* SNPhoto.m in Sources */,
+				59013BC01BC7B3E50045FBCD /* SNEmotionTool.m in Sources */,
 				599BF6A81B7DD78300CE7170 /* SNProfileViewController.m in Sources */,
+				59013A751BC799B00045FBCD /* SNEmotionView.m in Sources */,
+				59DC5DBF1BC60F43002C3B61 /* SNEmotionToolbar.m in Sources */,
 				590B1D1A1B9C27D5006EF69E /* MJPhoto.m in Sources */,
 				590B1D1F1B9C27D5006EF69E /* MJPhotoToolbar.m in Sources */,
 				597563311B8AF15600C5A9E7 /* SNUnreadCountResult.m in Sources */,
@@ -1238,6 +1309,7 @@
 				59ADDA8C1B83173400709574 /* AFURLResponseSerialization.m in Sources */,
 				599494911B7B406F008F2BFE /* UIBarButtonItem+Extension.m in Sources */,
 				593D959B1B789089009EB468 /* SNNavigationController.m in Sources */,
+				59013A721BC798C10045FBCD /* SNEmotionGridView.m in Sources */,
 				50B909301B83700800332F58 /* Foundation+Log.m in Sources */,
 				50B9092A1B836FB500332F58 /* UIImage+GIF.m in Sources */,
 				50B9092C1B836FB500332F58 /* UIImage+WebP.m in Sources */,
@@ -1407,6 +1479,7 @@
 				INFOPLIST_FILE = webd/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "17c6fe4f-7722-4f29-839c-5efd53ea8f72";
 			};
@@ -1422,6 +1495,7 @@
 				INFOPLIST_FILE = webd/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "17c6fe4f-7722-4f29-839c-5efd53ea8f72";
 			};

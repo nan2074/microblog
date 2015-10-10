@@ -47,6 +47,7 @@
     // 2.控制gif图标的现实
     NSString *extension = photo.thumbnail_pic.pathExtension.lowercaseString;
     self.gifview.hidden = ![extension isEqualToString:@"gif"];
+    
 }
 
 - (void)layoutSubviews

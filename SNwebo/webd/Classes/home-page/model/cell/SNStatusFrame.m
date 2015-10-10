@@ -24,6 +24,7 @@
     
     // 3.计算cell的高度
     self.cellHeight = CGRectGetMaxY(self.toolbarFrame);
+    
 }
 
 /**

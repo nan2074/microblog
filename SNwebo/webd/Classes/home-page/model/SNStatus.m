@@ -15,17 +15,19 @@
 
 - (NSDictionary *)objectClassInArray
 {
+  
     return @{@"pic_urls":[SNPhoto class]};
 }
 
 - (NSString *)created_at
 {
     NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
+    fmt.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
     fmt.dateFormat = @"EEE MMM dd HH:mm:ss Z yyyy";
     
     // 获得微博发布的具体时间
     NSDate *createDate = [fmt dateFromString:_created_at];
-    
+    SNLog(@"%@",createDate);
     // 判断是否为今年
     if (createDate.isThisYear) {
         if (createDate.isToday) {

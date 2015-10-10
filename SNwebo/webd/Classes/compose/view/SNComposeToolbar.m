@@ -8,6 +8,10 @@
 
 #import "SNComposeToolbar.h"
 
+@interface SNComposeToolbar()
+@property (nonatomic, weak) UIButton *emotionButton;
+@end
+
 @implementation SNComposeToolbar
 
 
@@ -27,7 +31,7 @@
         
         [self addButtonWithIcon:@"compose_trendbutton_background" highIcon:@"compose_trendbutton_background_highlighted" tag:SNComposeToolbarButtonTypeTrend];
         
-         [self addButtonWithIcon:@"compose_emoticonbutton_background" highIcon:@"compose_emoticonbutton_background_highlighted" tag:SNComposeToolbarButtonTypeEmotion];
+         self.emotionButton = [self addButtonWithIcon:@"compose_emoticonbutton_background" highIcon:@"compose_emoticonbutton_background_highlighted" tag:SNComposeToolbarButtonTypeEmotion];
     
     
     }
@@ -38,7 +42,7 @@
 /**
  *  添加一个按钮
  */
-- (void)addButtonWithIcon:(NSString *)icon highIcon:(NSString *)highIcon tag:(SNComposeToolbarButtonType)tag
+- (UIButton *)addButtonWithIcon:(NSString *)icon highIcon:(NSString *)highIcon tag:(SNComposeToolbarButtonType)tag
 {
     UIButton *button = [[UIButton alloc] init];
     button.tag = tag;
@@ -46,6 +50,8 @@
     [button setImage:[UIImage imageNamed:icon] forState:UIControlStateNormal];
     [button setImage:[UIImage imageNamed:highIcon] forState:UIControlStateHighlighted];
     [self addSubview:button];
+    
+    return button;
 }
 
 
@@ -74,4 +80,15 @@
     }
 }
 
+- (void)setShowEmotionButton:(BOOL)showEmotionButton
+{
+    _showEmotionButton = showEmotionButton;
+    if (showEmotionButton) { // 显示表情按钮
+        [self.emotionButton setImage:[UIImage imageNamed:@"compose_emoticonbutton_background"] forState:UIControlStateNormal];
+        [self.emotionButton setImage:[UIImage imageNamed:@"compose_emoticonbutton_background_highlighted"] forState:UIControlStateHighlighted];
+    } else { // 切换为键盘按钮
+        [self.emotionButton setImage:[UIImage imageNamed:@"compose_keyboardbutton_background"] forState:UIControlStateNormal];
+        [self.emotionButton setImage:[UIImage imageNamed:@"compose_keyboardbutton_background_highlighted"] forState:UIControlStateHighlighted];
+    }
+}
 @end

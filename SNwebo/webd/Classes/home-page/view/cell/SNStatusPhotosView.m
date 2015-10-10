@@ -44,8 +44,10 @@
             [self addSubview:photoView];
             
             // 添加手势监听器（一个手势监听器只能监听一对应的view）
+         
             UITapGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] init];
             [recognizer addTarget:self action:@selector(tapPhoto:)];
+           
             [photoView addGestureRecognizer:recognizer];
         }
     }
@@ -70,6 +72,8 @@
         MJPhoto *photo = [[MJPhoto alloc] init];
         // 设置图片的路径
         photo.url = [NSURL URLWithString:pic.bmiddle_pic];
+        
+        SNLog(@"%@",pic.bmiddle_pic);
         // 设置来源于哪一个UIIMageView
         photo.srcImageView = self.subviews[i];
         [photos addObject:photo];
@@ -93,6 +97,7 @@
         if (i <pic_urls.count) {
             photoView.photo = pic_urls[i];
             photoView.hidden = NO;
+     
         }
         else
         {

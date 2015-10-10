@@ -11,6 +11,7 @@
 #import "SNStatus.h"
 #import "SNUser.h"
 #import "UIImageView+WebCache.h"
+#import "SNStatusPhotosView.h"
 @interface SNStatusOriginalView ()
 
 // 昵称
@@ -30,6 +31,9 @@
 
 // 会员图标
 @property (weak, nonatomic) UIImageView *vipView;
+
+// 配图相册
+@property (weak, nonatomic) SNStatusPhotosView *photosView;
 
 @end
 
@@ -80,6 +84,11 @@
         vipView.contentMode = UIViewContentModeCenter;
         [self addSubview:vipView];
         self.vipView = vipView;
+        
+        // 7.配图相册
+        SNStatusPhotosView *photosView = [[SNStatusPhotosView alloc] init];
+        [self addSubview:photosView];
+        self.photosView = photosView;
     }
     return self;
 }
@@ -116,10 +125,11 @@
     // 3.时间
     NSString *time = status.created_at;
     self.timeLabel.text = time;
-    CGFloat timeX = CGRectGetMidX(self.nameLabel.frame);
+    CGFloat timeX = CGRectGetMinX(self.nameLabel.frame);
     CGFloat timeY = CGRectGetMaxY(self.nameLabel.frame) + SNStatusCellInset * 0.5;
     CGSize timeSize = [time sizeWithFont:SNStatusOrginalTimeFont];
     self.timeLabel.frame = (CGRect){{timeX,timeY},timeSize};
+   
     
     // 4.来源
     self.sourceLabel.text = status.source;
@@ -131,6 +141,18 @@
     // 5.头像
     self.iconView.frame = originalFrame.iconFrame;
     [self.iconView setImageWithURL:[NSURL URLWithString:user.profile_image_url] placeholderImage:[UIImage imageNamed:@"avatar_default_small"]];
+    
+    // 6.配图相册
+    if (status.pic_urls.count) {
+        self.photosView.frame = originalFrame.photosFrame;
+        self.photosView.pic_urls = status.pic_urls;
+        self.photosView.hidden = NO;
+       
+    }
+    else
+    {
+        self.photosView.hidden = YES;
+    }
     
     
 }

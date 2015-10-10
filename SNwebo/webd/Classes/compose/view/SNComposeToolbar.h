@@ -30,4 +30,6 @@ typedef enum {
 
 @property (weak, nonatomic) id<SNComposeToolbarDelegate> delegate;
 
+@property (assign, nonatomic) BOOL showEmotionButton;
+
 @end

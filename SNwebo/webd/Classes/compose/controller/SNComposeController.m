@@ -14,7 +14,7 @@
 #import "SNSendStatusResult.h"
 #import "SNStatusTool.h"
 #import "MBProgressHUD+MJ.h"
-
+#import "SNEmotionKeyboard.h"
 
 
 @interface SNComposeController () <SNComposeToolbarDelegate,UITextViewDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
@@ -22,12 +22,25 @@
 @property (nonatomic, weak) SNTextView *textView;
 @property (nonatomic, weak) SNComposeToolbar *toolbar;
 @property (nonatomic, weak) SNComposePhotosView *photosView;
+@property (strong, nonatomic) SNEmotionKeyboard *keyboard;
 
+// 切换键盘
+@property (assign, nonatomic,getter=isChangingKeyboard) BOOL changingKeyboard;
 
 @end
 
 @implementation SNComposeController
 
+
+- (SNEmotionKeyboard *)keyboard
+{
+    if (!_keyboard) {
+        self.keyboard = [SNEmotionKeyboard keyboard];
+        self.keyboard.width = SNScreenW;
+        self.keyboard.height = 258;
+    }
+    return _keyboard;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
 
@@ -43,12 +56,6 @@
     // 添加显示图片的相册控件
     [self setupPhotosView];
 
-    
-    
-    
-
-
-    
  
 }
 
@@ -117,6 +124,11 @@
  */
 - (void)keyboardWillHide:(NSNotification *)note
 {
+    
+    if (self.isChangingKeyboard) {
+        self.changingKeyboard = NO;
+        return;
+    }
     // 1.键盘弹出需要的时间
     CGFloat duration = [note.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
     
@@ -207,8 +219,29 @@
  */
 - (void)openEmotion
 {
+    // 切换键盘
+    self.changingKeyboard = YES;
+    if (self.textView.inputView) {
+        self.textView.inputView = nil;
+        
+        // 显示表情图片
+        self.toolbar.showEmotionButton = YES;
+    }
+    else {
+        self.textView.inputView = self.keyboard;
+        
+        self.toolbar.showEmotionButton = NO;
+    }
     
+    // 关闭键盘
+    [self.textView resignFirstResponder];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        // 打开键盘
+        [self.textView becomeFirstResponder];
+    });
 }
+
+
 
 #pragma mark - UIImagePickerControllerDelegate
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info

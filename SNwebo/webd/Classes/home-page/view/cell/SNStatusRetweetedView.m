@@ -10,7 +10,7 @@
 #import "SNStatusRetweetedFrame.h"
 #import "SNStatus.h"
 #import "SNUser.h"
-
+#import "SNStatusPhotosView.h"
 @interface SNStatusRetweetedView ()
 
 // 昵称
@@ -19,6 +19,8 @@
 // 正文
 @property (weak, nonatomic) UILabel *textLabel;
 
+// 配图
+@property (weak, nonatomic) SNStatusPhotosView *photosView;
 @end
 
 @implementation SNStatusRetweetedView
@@ -29,6 +31,7 @@
     
     if (self) {
         
+        self.userInteractionEnabled = YES;
         self.image = [UIImage resizedImage:@"timeline_retweet_background"];
         
         // 1.昵称
@@ -44,6 +47,11 @@
         textLabel.numberOfLines = 0;
         [self addSubview:textLabel];
         self.textLabel = textLabel;
+        
+        // 3.配图
+        SNStatusPhotosView *photosView = [[SNStatusPhotosView alloc] init];
+        [self addSubview:photosView];
+        self.photosView = photosView;
     }
     
     return self;
@@ -68,6 +76,17 @@
     // 2.正文
     self.textLabel.text = retweetedStatus.text;
     self.textLabel.frame = retWeetedFrame.textFrame;
+    
+    // 3.配图相册
+    if (retweetedStatus.pic_urls.count) {
+        self.photosView.frame = retWeetedFrame.photosFrame;
+        self.photosView.pic_urls = retweetedStatus.pic_urls;
+        self.photosView.hidden = NO;
+    }
+    else
+    {
+        self.photosView.hidden = YES;
+    }
 }
 
 

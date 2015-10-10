@@ -46,12 +46,11 @@
     CGSize maxSize = CGSizeMake(maxW, MAXFLOAT);
     CGSize textSize = [status.text sizeWithFont:SNStatusOrginalTextFont constrainedToSize:maxSize];
     self.textFrame = (CGRect){{textX, textY}, textSize};
-    
     // 4.配图相册
     CGFloat h = 0;
     if (status.pic_urls.count) {
         CGFloat photosX = textX;
-        CGFloat photosY = textY;
+        CGFloat photosY = CGRectGetMaxY(self.textFrame) + SNStatusCellInset;
         CGSize photoSize = [SNStatusPhotosView sizeWithPhotoCount:status.pic_urls.count];
         self.photosFrame = (CGRect){{photosX,photosY},photoSize};
         h = CGRectGetMaxY(self.photosFrame) + SNStatusCellInset;
