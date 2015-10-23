@@ -64,6 +64,8 @@
     
 //    [self setupUserInfo];
     
+  
+    
     
 }
 /**
@@ -119,7 +121,9 @@
 
 - (void)refreshControlStateChange:(UIRefreshControl *)refreshControl
 {
+   
     [self loadNewStatuses:refreshControl];
+    
 }
 
 
@@ -189,6 +193,9 @@
 //        SNLog(@"请求失败--------%@",error);
 //        [refreshControl endRefreshing];
 //    }];
+    
+    
+
     
     // 1.封装请求参数
     SNHomeStatusesParam *param = [SNHomeStatusesParam param];

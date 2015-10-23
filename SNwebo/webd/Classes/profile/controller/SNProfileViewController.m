@@ -8,7 +8,7 @@
 
 #import "SNProfileViewController.h"
 #import "SNPopMenu.h"
-
+#import <Crashlytics/Crashlytics.h>
 
 @interface SNProfileViewController ()
 
@@ -20,9 +20,18 @@
     [super viewDidLoad];
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"设置" style:UIBarButtonItemStyleBordered target:self action:@selector(setting)];
+    
+    UIButton* button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    button.frame = CGRectMake(20, 50, 100, 30);
+    [button setTitle:@"Crash" forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(crashButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
+
 
 }
-
+- (IBAction)crashButtonTapped:(id)sender {
+    [[Crashlytics sharedInstance] crash];
+}
 
 - (void)setting
 {

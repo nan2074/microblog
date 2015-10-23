@@ -119,6 +119,8 @@
 		59DC5DBF1BC60F43002C3B61 /* SNEmotionToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 59DC5DBE1BC60F43002C3B61 /* SNEmotionToolbar.m */; settings = {ASSET_TAGS = (); }; };
 		59F150231B81A8AD008D354F /* SNSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F150221B81A8AD008D354F /* SNSearchBar.m */; };
 		59F150261B81B375008D354F /* SNPopMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F150251B81B375008D354F /* SNPopMenu.m */; };
+		59F30CDD1BD0956B00B5811E /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59F30CDB1BD0956B00B5811E /* Fabric.framework */; settings = {ASSET_TAGS = (); }; };
+		59F30CDE1BD0956B00B5811E /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59F30CDC1BD0956B00B5811E /* Crashlytics.framework */; settings = {ASSET_TAGS = (); }; };
 		59F33D7F1B8AC24E0094D4B5 /* SNBaseParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F33D7E1B8AC24E0094D4B5 /* SNBaseParam.m */; };
 		59F5B5401B8C51AC00C942E5 /* SNStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F5B53F1B8C51AC00C942E5 /* SNStatusCell.m */; };
 		59F5B54F1B8C5CB200C942E5 /* SNStatusDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F5B54E1B8C5CB200C942E5 /* SNStatusDetailView.m */; };
@@ -364,6 +366,8 @@
 		59F150221B81A8AD008D354F /* SNSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNSearchBar.m; sourceTree = "<group>"; };
 		59F150241B81B375008D354F /* SNPopMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNPopMenu.h; sourceTree = "<group>"; };
 		59F150251B81B375008D354F /* SNPopMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNPopMenu.m; sourceTree = "<group>"; };
+		59F30CDB1BD0956B00B5811E /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		59F30CDC1BD0956B00B5811E /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		59F33D7D1B8AC24E0094D4B5 /* SNBaseParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNBaseParam.h; sourceTree = "<group>"; };
 		59F33D7E1B8AC24E0094D4B5 /* SNBaseParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNBaseParam.m; sourceTree = "<group>"; };
 		59F5B53E1B8C51AC00C942E5 /* SNStatusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNStatusCell.h; sourceTree = "<group>"; };
@@ -395,6 +399,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59F30CDE1BD0956B00B5811E /* Crashlytics.framework in Frameworks */,
+				59F30CDD1BD0956B00B5811E /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -570,6 +576,7 @@
 		593D952A1B785A63009EB468 /* webd */ = {
 			isa = PBXGroup;
 			children = (
+				59F30CDA1BD0953C00B5811E /* frammwork */,
 				593D95511B785A8E009EB468 /* Classes */,
 				593D95351B785A63009EB468 /* Main.storyboard */,
 				593D95381B785A63009EB468 /* Images.xcassets */,
@@ -1055,6 +1062,15 @@
 			path = emotionKeyboard;
 			sourceTree = "<group>";
 		};
+		59F30CDA1BD0953C00B5811E /* frammwork */ = {
+			isa = PBXGroup;
+			children = (
+				59F30CDB1BD0956B00B5811E /* Fabric.framework */,
+				59F30CDC1BD0956B00B5811E /* Crashlytics.framework */,
+			);
+			name = frammwork;
+			sourceTree = "<group>";
+		};
 		59F7B5971B86D2770017A36D /* model */ = {
 			isa = PBXGroup;
 			children = (
@@ -1134,6 +1150,7 @@
 				593D95241B785A63009EB468 /* Sources */,
 				593D95251B785A63009EB468 /* Frameworks */,
 				593D95261B785A63009EB468 /* Resources */,
+				59F30CD91BD094DD00B5811E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1224,6 +1241,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		59F30CD91BD094DD00B5811E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 09729b7ddfeac0a7d688b5e22bb39c5686de421d 38b79b02793b34af9d4174a3e6c1af63581049f77afcde00d006e5357d77bcea";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		593D95241B785A63009EB468 /* Sources */ = {
@@ -1474,11 +1507,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Feng Wang (Q3NCJ48667)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/webd",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = webd/PrefixHeader.pch;
 				INFOPLIST_FILE = webd/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/webd/Classes/main",
+				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "17c6fe4f-7722-4f29-839c-5efd53ea8f72";
@@ -1490,11 +1531,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Feng Wang (Q3NCJ48667)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/webd",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = webd/PrefixHeader.pch;
 				INFOPLIST_FILE = webd/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/webd/Classes/main",
+				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "17c6fe4f-7722-4f29-839c-5efd53ea8f72";
